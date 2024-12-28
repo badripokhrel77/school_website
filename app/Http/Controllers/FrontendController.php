@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index()
-    {
-        return view('frontend.index');
-    }
+{
+    $teamMembers = Team::all();
 
-    public function home()
-    {
-        return view('frontend.index');
-    }
+    return view('frontend.index', compact('teamMembers'));
+}
+
+public function home()
+{
+    
+    $teamMembers = Team::all();
+
+    return view('frontend.index', compact('teamMembers'));
+}
 
     public function about()
     {

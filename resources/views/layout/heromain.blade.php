@@ -45,15 +45,42 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>बाल शिक्षा</h2>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-light shadow p-0" style="height: 120px;">
+        <a href="{{ url('/') }}" class="navbar-brand d-flex flex-column align-items-start px-4 px-lg-5">
+            <h2 class="m-0 text-white"><i class="fa fa-book me-3"></i>श्री बाल शिक्षा मा वि</h2>
+            <small class="text-white" style="margin-top: 15px; margin-left: 50px;">
+                <i class="fa fa-map-marker-alt me-2"></i>Jhimruk-05, Machchhi, Pyuthan
+            </small>
         </a>
+        {{-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto d-flex align-items-center" style="padding-left: 0;">
+                <li class="nav-item mb-0 me-3">
+                    <a href="tel:+977-1234567890" class="nav-link text-white">
+                        <i class="fa fa-phone me-2"></i>086-500001
+                    </a>
+                </li>
+                <li class="nav-item mb-0">
+                    <a href="mailto:jhimruk.balshikshyass@gmail.com" class="nav-link text-white"
+                        style="text-transform: lowercase;">
+                        <i class="fa fa-envelope me-2"></i>jhimruk.balshikshyass@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0" style="height: 50px;">
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="navbar-nav ms-4 p-4 p-lg-0">
                 <a href="{{ url('home') }}"
                     class="nav-item nav-link {{ request()->is('home') ? 'active' : '' }}">Home</a>
                 <a href="{{ url('about') }}"
@@ -75,8 +102,26 @@
                     class="nav-item nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
             </div>
         </div>
-
     </nav>
+
+    <nav class="navbar navbar-expand-lg bg-light-green navbar-light shadow p-0" style="height: 30px;">
+        {{-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-0 w-100 p-0">
+                <!-- Centered "Notice" with better vertical alignment -->
+                <h6 class="bg-primary text-white p-3 text-center" style="margin-bottom: 0; line-height: 1.5;">
+                    Notice
+                </h6>
+                <marquee>
+                    <a href="#" style="color:green; line-height: 3.5;">This is a scrolling notice! Click here for more
+                        information.</a>
+                </marquee>
+            </div>
+        </div>
+    </nav>
+
 
     @yield('content')
 
@@ -109,7 +154,8 @@
                     </p>
                     <div class="d-flex justify-content-center pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i
+                                class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i
                                 class="fab fa-linkedin-in"></i></a>
